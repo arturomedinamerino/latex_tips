@@ -1,0 +1,47 @@
+\documentclass[11pt]{article}
+
+\usepackage[utf8]{inputenc}
+
+% Required packages for this tip
+% Better lines for tables
+\usepackage{booktabs}
+% Allow rotating tables (and any other object)
+\usepackage[clockwise]{rotating}
+
+% Not mandatory, only required for the content of the table being used as
+% example
+\usepackage{siunitx}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% SIDEWAYS TABLE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{sidewaystable}
+\centering
+
+	\begin{tabular}{rrrrrr}
+	\toprule
+	\multicolumn{1}{c}{\textbf{Applied force (\SI{}{\newton})}} & \multicolumn{1}{c}{\textbf{X displacement (\SI{}{\milli\meter})}} & \multicolumn{1}{c}{\textbf{Angle (\SI{}{\degree})}} & \multicolumn{1}{c}{\textbf{Stress (\SI{}{\pascal})}} & \multicolumn{1}{c}{\textbf{Moment (\SI{}{\newton\meter})}} & \multicolumn{1}{c}{\textbf{Stiffness (\SI{}{\newton\meter\per\radian})}} \\
+			\midrule
+			1     & 0.738 & 2.299308607 &\SI{ 9.86E+06} & 0.02539 & 0.632685783 \\
+				2     & 1.48  & 4.611079591 & \SI{1.97E+07} & 0.05078 & 0.630975822 \\
+				3     & 2.21  & 6.885463443 & \SI{2.96E+07} & 0.07617 & 0.633830916 \\
+				4     & 2.95  & 9.191003239 & \SI{3.94E+07} & 0.10156 & 0.633114723 \\
+				5     & 3.69  & 11.49654303 & \SI{4.93E+07}& 0.12695 & 0.632685783 \\
+                % Numbers in this row are underline because they represent the
+                % most relevant result in the table. This is a good practice
+                % because it highlights the purpose of the table
+				6     & 4.43  & \underline{13.80208283} & \underline{$5.91 \times 10^7$} & 0.15234 & 0.632400146 \\
+				7     & 5.166 & 16.09516025 & \SI{6.90E+07} & 0.17773 & 0.632685783 \\
+				8     & 5.904 & 18.39446886 & \SI{7.86E+07} & 0.20312 & 0.632685783 \\
+				9     & 6.642 & 20.69377746 & \SI{8.87E+07} & 0.22851 & 0.632685783 \\
+				\bottomrule
+	\end{tabular}%
+			\caption{Results of the performed stress analysis. The underlined values represent the maximum stress that the beams can suffer without causing permanent deformation. Consequently, the maximum rotation angle is \SI{13.8}{\degree}}\label{tab:stress@analysis}%
+\end{sidewaystable}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% END
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
