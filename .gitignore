@@ -3,6 +3,8 @@
 # Added by Arturo Medina:
 # Do not include excel files with info
 ./excel
+# Swap files
+*.swp
 #
 ## Core latex/pdflatex auxiliary files:
 *.aux
